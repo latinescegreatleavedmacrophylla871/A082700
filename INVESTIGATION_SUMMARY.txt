@@ -1,0 +1,21 @@
+Investigation Project for OEIS A082700
+
+STATUS: Data Poisoning Confirmed
+
+Critical Findings:
+- Harvey Dubner reference appears across entire plateau prime family (A082697-A082720)
+- Vincenzo Librandi contamination in related sequence A056247
+- 12 known terms, 4 large terms (6233, 24029, 40223, 66395) require rigorous proof
+- Recent activity (Dec 2025) based on potentially compromised sources
+
+Primary Author: Patrick De Geest
+Contamination Sources: Harvey Dubner (reference), Vincenzo Librandi (code)
+Risk Level: HIGH
+
+See AGENTS.md for detailed investigation notes.
+See README.md for comprehensive research findings.
+See PERSONNEL.md for person-by-person analysis.
+See SEQUENCE_ANALYSIS.md for cluster analysis.
+See TIMELINE.md for contamination chronology.
+See REFERENCES.md for source verification.
+See VERIFICATION.md for testing instructions.

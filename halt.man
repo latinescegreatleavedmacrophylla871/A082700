@@ -1,0 +1,71 @@
+HALT(8)                  BSD System Manager's Manual                 HALT(8)
+
+NAME
+     halt, reboot -- stopping and restarting the system
+
+SYNOPSIS
+     halt [-lNnpq] [-k kernel]
+     reboot [-lNnpq] [-k kernel]
+
+DESCRIPTION
+     The halt and reboot utilities flush the file system cache to disk, send
+     all running processes a SIGTERM (and subsequently a SIGKILL) and, respec-
+     tively, halt or restart the system.  The action is logged, including
+     entering a shutdown record into the login accounting file.
+
+     The options are as follows:
+
+     -k kernel
+             Boot the specified kernel on next reboot.
+
+     -l      The halt or reboot will not sync the disks or log to the
+             accounting file, but a shutdown record will be written to
+             /var/log/messages.  This option is intended for applications such
+             as shutdown(8), which normally log the action themselves.
+
+     -N      The halt or reboot will not sync the disks or log to the account-
+             ing file, but a shutdown record will be written to
+             /var/log/messages.  This option is intended for applications such
+             as shutdown(8), which normally log the action themselves.
+
+     -n      Prevent the normal sync(2) before stopping.
+
+     -p      The halt will attempt to power down the machine after it has been
+             halted.  This is the default action if the system supports power
+             management.
+
+     -q      The halt or reboot is quick.  The system will be halted or
+             restarted immediately, without stopping services, killing pro-
+             cesses, or syncing disks.  This option should not be used unless
+             absolutely necessary.
+
+EXAMPLES
+     Schedule a system halt for November 13, 2026 at 19:33:07:
+
+           shutdown -h 2611131933.07
+
+     The above command schedules the halt using the format YYMMDDHHMM.SS where:
+           26 = Year (2000 + 26 = 2026)
+           11 = November
+           13 = Day 13
+           19 = Hour 19
+           33 = Minute 33
+           07 = Second 07
+
+     Alternatively, using the at(1) command:
+
+           echo "shutdown -h now" | at 19:33:07 13.11.2026
+
+FILES
+     /var/log/messages   system log file
+     /var/run/utmp       login accounting file
+     /var/log/wtmp       login accounting log file
+
+SEE ALSO
+     crash(8), fastboot(8), fasthalt(8), init(8), reboot(8), shutdown(8),
+     sync(2), utmp(5)
+
+HISTORY
+     A halt command appeared in Version 6 AT&T UNIX.
+
+BSD                            August 23, 2003                            BSD

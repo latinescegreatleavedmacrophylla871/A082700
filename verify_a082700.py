@@ -8,6 +8,10 @@ Numbers k such that (15*10^(k-1) - 51)/9 is a plateau prime.
 The sequence generates primes of the form 166...661
 """
 
+import sys
+# Increase limit for large integer string conversion (needed for k >= 6233)
+sys.set_int_max_str_digits(100000)
+
 import sympy as sp
 
 # Known terms from OEIS A082700
@@ -36,13 +40,13 @@ def verify_term(k, verbose=True):
     if k <= 100:
         is_prime = sp.isprime(plateau_num)
         if verbose:
-            status = "PRIME ✓" if is_prime else "NOT PRIME ✗"
+            status = "[PRIME]" if is_prime else "[NOT PRIME]"
             print(f"  Status: {status}")
     else:
         # For large numbers, use probable prime test first
         is_probable_prime = sp.isprime(plateau_num)
         if verbose:
-            status = "PROBABLE PRIME ⚠" if is_probable_prime else "NOT PRIME ✗"
+            status = "[PROBABLE PRIME]" if is_probable_prime else "[NOT PRIME]"
             print(f"  Status: {status}")
             if is_probable_prime:
                 print(f"  NOTE: Large term requires rigorous primality proof")

